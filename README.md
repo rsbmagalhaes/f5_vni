@@ -12,14 +12,19 @@ export PLUGIN_DIRECTORY=~/.terraform.d/plugins/terraform-stratus.com/ibm-cloud/i
 # Create directory and unzip binary
 
 mkdir -p $PLUGIN_DIRECTORY
+
 wget $URL_PROVIDER -P $PLUGIN_DIRECTORY
+
 unzip $PLUGIN_DIRECTORY/terraform-provider-ibm_1.59.0-vnip2.1_darwin_arm64.zip -d $PLUGIN_DIRECTORY
+
 rm -rf $PLUGIN_DIRECTORY/terraform-provider-ibm_1.59.0-vnip2.1_darwin_arm64.zip.1
 
 # Execute it
 
 terraform init
+
 terraform plan -out plan.out
+
 terraform apply plan.out
 
 
