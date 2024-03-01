@@ -1,9 +1,9 @@
-This repo tries to show the capabilities of vNIC terraform module
+# This repo tries to show the capabilities of vNIC terraform module
 
 Provider installation (v1.59.0-vnip2)
 Following steps are valid for macOS!. If you are in other system try to find the equivalent steps. Because of package are been provided manually we need to do the following to install it.
 
-Create some need variables
+# Create some need variables
 
 export URL_PROVIDER=https://github.com/ibm-vpc-official/terraform-provider-ibm/releases/download/v1.59.0-vnip2.1/terraform-provider-ibm_1.59.0-vnip2.1_darwin_arm64.zip
 export PLUGIN_DIRECTORY=~/.terraform.d/plugins/terraform-stratus.com/ibm-cloud/ibm/1.59.0-vnip2.1/darwin_arm64
