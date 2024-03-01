@@ -6,14 +6,18 @@ Following steps are valid for macOS!. If you are in other system try to find the
 # Create some need variables
 
 export URL_PROVIDER=https://github.com/ibm-vpc-official/terraform-provider-ibm/releases/download/v1.59.0-vnip2.1/terraform-provider-ibm_1.59.0-vnip2.1_darwin_arm64.zip
+
 export PLUGIN_DIRECTORY=~/.terraform.d/plugins/terraform-stratus.com/ibm-cloud/ibm/1.59.0-vnip2.1/darwin_arm64
-Create directory and unzip binary
+
+# Create directory and unzip binary
 
 mkdir -p $PLUGIN_DIRECTORY
 wget $URL_PROVIDER -P $PLUGIN_DIRECTORY
 unzip $PLUGIN_DIRECTORY/terraform-provider-ibm_1.59.0-vnip2.1_darwin_arm64.zip -d $PLUGIN_DIRECTORY
 rm -rf $PLUGIN_DIRECTORY/terraform-provider-ibm_1.59.0-vnip2.1_darwin_arm64.zip.1
-Execute it
+
+# Execute it
+
 terraform init
 terraform plan -out plan.out
 terraform apply plan.out
